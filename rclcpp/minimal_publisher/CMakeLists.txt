@@ -20,12 +20,16 @@ ament_target_dependencies(publisher_lambda rclcpp std_msgs)
 add_executable(publisher_member_function member_function.cpp)
 ament_target_dependencies(publisher_member_function rclcpp std_msgs)
 
+add_executable(publisher_member_function_instrumented member_function_instrumented.cpp)
+ament_target_dependencies(publisher_member_function_instrumented rclcpp std_msgs)
+
 add_executable(publisher_not_composable not_composable.cpp)
 ament_target_dependencies(publisher_not_composable rclcpp std_msgs)
 
 install(TARGETS
   publisher_lambda
   publisher_member_function
+  publisher_member_function_instrumented
   publisher_not_composable
   DESTINATION lib/${PROJECT_NAME}
 )
