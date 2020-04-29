@@ -26,6 +26,9 @@ ament_target_dependencies(publisher_member_function_instrumented rclcpp std_msgs
 add_executable(publisher_member_function_no_param_services member_function_no_param_services.cpp)
 ament_target_dependencies(publisher_member_function_no_param_services rclcpp std_msgs)
 
+add_executable(publisher_member_function_twenty member_function_twenty.cpp)
+ament_target_dependencies(publisher_member_function_twenty rclcpp std_msgs)
+
 add_executable(publisher_not_composable not_composable.cpp)
 ament_target_dependencies(publisher_not_composable rclcpp std_msgs)
 
@@ -34,6 +37,7 @@ install(TARGETS
   publisher_member_function
   publisher_member_function_instrumented
   publisher_member_function_no_param_services
+  publisher_member_function_twenty
   publisher_not_composable
   DESTINATION lib/${PROJECT_NAME}
 )
